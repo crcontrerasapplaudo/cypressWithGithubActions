@@ -1,0 +1,20 @@
+# Workflow name, it can be any name
+# this is the first key value
+name: Cypress Test
+
+# Event to trigger a job
+on: [push]
+
+jobs:
+  # name of the job, it can be any name
+  cypress-run:
+    # virtual test environment
+    runs-on: ubuntu-latest
+    #steps of the job, or actios of github actions
+    steps:
+      # name of the step, it can be any name
+      - name: Checkout
+        uses: actions/checkout@v2.5.0
+      - name: Cypress.io
+        uses: cypress-io/github-action@v4.2.0
+

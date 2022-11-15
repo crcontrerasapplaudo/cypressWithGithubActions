@@ -15,7 +15,18 @@ jobs:
       # name of the step, it can be any name
       - name: Checkout step
         uses: actions/checkout@v2.5.0
+      # name of the step, it can be any name
       - name: Cypress.io step
         uses: cypress-io/github-action@v4.2.0
         with:
           browser: chrome
+
+  cypress-run2:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout step
+        uses: actions/checkout@v2.5.0
+      - name: Cypress.io step
+        uses: cypress-io/github-action@v4.2.0
+        with:
+          browser: edge
